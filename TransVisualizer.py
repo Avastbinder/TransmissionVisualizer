@@ -96,7 +96,6 @@ def graph(per_gear_speed_vs_rpm):
                 list_keys_new = list_keys
 
             else:
-            
                 list_values_new = list_values[index:]
                 list_keys_new = list_keys[index:]
         
@@ -110,7 +109,7 @@ def closest_value(next_list_values, c):
   return next_list_values[min(range(len(next_list_values)), key=lambda i: abs(next_list_values[i]-c))]
 
 def main():
-    ttk.Label(mainframe, text='Welcome to the Transmission Gear Ratio visualizer. \nThis is used to see how the different drivetrain components interact, and what the end result is for the driver.').grid(column=0, row=0, sticky=(W, E))
+    ttk.Label(mainframe, text='Welcome to the Transmission Gear Ratio visualizer. \nThis is used to see how wheel speed compares to engine rpm for each gear.').grid(column=0, row=0, sticky=(W, E))
     ttk.Label(mainframe, text='How many gears does your tansmission have?\nExample: 5').grid(column=0, row=1, sticky=(W, E))
     ttk.Entry(mainframe, textvariable=gears_value).grid(column=0, row=2, sticky=(W, E))
     ttk.Label(mainframe, text="What is your max RPM? \nExample: 6000").grid(column=0, row=3, sticky=W)
